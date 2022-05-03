@@ -1,0 +1,301 @@
+
+*  {
+    box-sizing: border-box ; 
+    padding: 0 ;
+    margin: 0 ;  
+  }
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+  /*---- LISTS -----*/
+  list-style:none; 
+
+  /* HOME */
+
+   .home {
+      justify-content: center;
+      background-color: green;
+      background-size: cover;  /* NO PUEDO LINKEAR CSS*/
+      height: 100vh;
+  }
+      
+
+
+  h1{
+      text-align: center;
+
+      animation-name:fade-in;
+      animation-duration: 1s;
+
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+
+    animation-name:fade-in;
+    animation-duration: 1s;
+}
+
+  p{ 
+    text-align: center;
+}
+
+    @keyframes fade-in{
+        0% {
+            transform: translateX(80px)
+        }
+    
+        100% {
+            transform: translate(0px);
+
+        }
+  }
+
+    /* MAIN */
+
+/* ----- SECCION QUIENES SOMOS ------------*/
+
+.quienesSomos{
+    background-color: brown;
+    background-size: cover;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.textos{
+
+}
+
+.textoQuienesSomos{
+    font-size: small;
+}
+
+
+/* INICIA SECCION GALERIA  */
+
+.marcas{
+    background-color: bisque;
+}
+
+h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+.galeriaClientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+img{
+    max-width: 100%;
+    width: 100px;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.productContainer{
+    border-radius: 5px;
+    border: solid red;
+    justify-items: center; /* no funciona*/
+}
+
+/* INICIA MEDIA QUERIES GALERIA -- WEB DESARROLLADA MOBILE FIRST */
+
+@media (min-width:768px) {
+    
+.marcas{
+    align-items: center;
+    justify-items: center;
+}
+
+    .galeriaClientes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); }
+    img{
+        max-width: 100%;
+        width: 150px;
+        justify-items: center;
+    }
+    
+@media (min-width:1024px) {
+
+    .galeriaClientes{
+        display: grid;
+    
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); }
+
+    img {
+        max-width: 100%;
+        width: 250px;
+    }
+}
+
+/* ---------------------------------FOOTER--------------------------------------------------------------------------*/
+
+footer{
+    background-color:aquamarine ;
+    height: 100px;
+}
+
+.footerContent{
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo{
+    height: 30px;
+    width: auto;
+    transition: heigth 2s, width 2s;
+}
+
+.footerLogo :hover{
+    height: 40px;
+}
+/*
+@media (min-width: 768px){
+    footer{
+        background-color:aquamarine ;
+        height: 150px;
+    }
+    
+    .footerContent{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footerLogo{
+        height: 45px;
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px){
+    footer{
+        background-color:aquamarine ;
+        height: 200px;
+    }
+    
+    .footerContent{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footerLogo{
+        height: 60px;
+        width: auto;
+    }
+}
+-----------------------------------FIN FOOTER-----------------------------------------------------*/
+
+/* CONTACTO */
+
+.container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+    max-width: 700px;
+  }
+  
+  .header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+  }
+  
+  form {
+    background-color: azure;
+    padding: 2.5rem 0.625rem;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+    margin top: 15px;
+  }
+  
+    form {
+      padding: 2.5rem;
+    }
+  }
+  
+    .form-group {
+      margin: 0 auto 1.25rem auto;
+      padding: 0.25rem;
+    }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: green;
+    color: inherit;
+    border-radius: 2px;
+    border: 2px solid green;
+  }
+  
+  .submit-button:hover{
+    background-color:white;
+    border: 2px solid black;
+    color:var(--color-green);
+  }
+  
+  input{
+    display: flex;
+    margin: 1%;
+  } 
+
+  /* CAPACITACIONES */
+
+  .cursos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presenciales{
+      
+  }
+
+  .online{
+
+  }
+
+  @media (min-width:768px){
+    .cursos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat( 1fr); }
+      }
+
+      
+  }
+
+  /* TRANSICIONES */
