@@ -10,21 +10,22 @@ body{
 }
 
   /*---- LISTS -----*/
-  list-style:none; 
 
   /* HOME */
 
-   .home {
-      justify-content: center;
-      background-color: green;
-      background-size: cover;  /* NO PUEDO LINKEAR CSS*/
-      height: 100vh;
-  }
+   .Home {
+      background-color: aquamarine; /* en un futuro seria reemplazado por un video en loop con opacidad */
+      height:100vh;
       
+     text-justify: center;
 
+     animation-name: fade-in;
+     animation-duration: 2s;
+  }
 
   h1{
       text-align: center;
+      padding: 20px 0px 0px 0px     ;
 
       animation-name:fade-in;
       animation-duration: 1s;
@@ -46,11 +47,18 @@ body{
 
     @keyframes fade-in{
         0% {
-            transform: translateX(80px)
+            transform: translateX(40px) ;
+            background-color: white;
         }
     
+        50%{
+          background-color: azure;
+        }
+
         100% {
             transform: translate(0px);
+            background-color:aquamarine ;
+          
 
         }
   }
@@ -60,16 +68,12 @@ body{
 /* ----- SECCION QUIENES SOMOS ------------*/
 
 .quienesSomos{
-    background-color: brown;
-    background-size: cover;
-    height: 100vh;
-    
     display: flex;
     flex-direction: column;
 }
 
 .textos{
-
+    padding: 20px;
 }
 
 .textoQuienesSomos{
@@ -78,10 +82,6 @@ body{
 
 
 /* INICIA SECCION GALERIA  */
-
-.marcas{
-    background-color: bisque;
-}
 
 h2 {
     text-align: center;
@@ -93,8 +93,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-items: center; 
     gap: 20px;
+}
+
+.productContainer{
+    justify-content: center;
 }
 
 img{
@@ -107,11 +111,7 @@ p{
     font-weight: bold;
 }
 
-.productContainer{
-    border-radius: 5px;
-    border: solid red;
-    justify-items: center; /* no funciona*/
-}
+
 
 /* INICIA MEDIA QUERIES GALERIA -- WEB DESARROLLADA MOBILE FIRST */
 
@@ -130,6 +130,7 @@ p{
         max-width: 100%;
         width: 150px;
         justify-items: center;
+        padding: 10px;
     }
     
 @media (min-width:1024px) {
@@ -148,60 +149,7 @@ p{
 
 /* ---------------------------------FOOTER--------------------------------------------------------------------------*/
 
-footer{
-    background-color:aquamarine ;
-    height: 100px;
-}
-
-.footerContent{
-    display: flex;
-    justify-content: center;
-}
-
-.footerLogo{
-    height: 30px;
-    width: auto;
-    transition: heigth 2s, width 2s;
-}
-
-.footerLogo :hover{
-    height: 40px;
-}
-/*
-@media (min-width: 768px){
-    footer{
-        background-color:aquamarine ;
-        height: 150px;
-    }
-    
-    .footerContent{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footerLogo{
-        height: 45px;
-        width: auto;
-    }
-}
-
-@media (min-width: 1024px){
-    footer{
-        background-color:aquamarine ;
-        height: 200px;
-    }
-    
-    .footerContent{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .footerLogo{
-        height: 60px;
-        width: auto;
-    }
-}
------------------------------------FIN FOOTER-----------------------------------------------------*/
+/*-----------------------------------FIN FOOTER-----------------------------------------------------*/
 
 /* CONTACTO */
 
@@ -278,14 +226,8 @@ footer{
   .cursos{
     display: flex;
     flex-direction: column;
-  }
-
-  .presenciales{
-      
-  }
-
-  .online{
-
+    justify-content: center;
+    justify-items: center;
   }
 
   @media (min-width:768px){
@@ -293,9 +235,6 @@ footer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat( 1fr); }
-      }
-
-      
+      }      
   }
 
-  /* TRANSICIONES */
